@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# TYPESCRIPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# What is TypeScript?
 
-## Available Scripts
+- TypeScript is a syntactic superset of JavaScript which adds static typing.
+- This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add types.
 
-In the project directory, you can run:
+# Why should I use TypeScript?
 
-### `npm start`
+- JavaScript is a loosely typed language. It can be difficult to understand what types of data are being passed around in JavaScript.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- In JavaScript, function parameters and variables don't have any information! So developers need to look at documentation, or guess based on the implementation.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- TypeScript allows specifying the types of data being passed around within the code, and has the ability to report errors when the types don't match.
 
-### `npm test`
+- For example, TypeScript will report an error when passing a string into a function that expects a number. JavaScript will not.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# TypeScript Compiler
 
-### `npm run build`
+- TypeScript is transpiled into JavaScript using a compiler.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Installing the Compiler
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Within your npm project, run the following command to install the compiler:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```javascript
+npm install typescript --save-dev
+```
 
-### `npm run eject`
+- The compiler is installed in the node_modules directory and can be run with: npx tsc.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```javascript
+npx tsc
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Configuring the compiler
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- The compiler can be configured using a tsconfig.json file.
+- You can have TypeScript create tsconfig.json with the recommended settings with:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+npx tsc --init
+```
